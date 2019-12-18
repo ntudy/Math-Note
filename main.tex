@@ -1,0 +1,27 @@
+\documentclass[a4paper,11pt]{book}
+\usepackage{import}
+\usepackage{example}
+
+\usepackage{makeidx}
+\makeindex
+
+\begin{document}
+
+\frontmatter
+\import{./}{title.tex}
+
+\clearpage
+\thispagestyle{empty}
+
+\tableofcontents
+
+\mainmatter
+\chapter{Functional Analysis}
+\import{sections/}{RKHS.tex}
+
+
+\backmatter
+
+\import{./}{bibliography.tex}
+
+\end{document}

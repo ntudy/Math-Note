@@ -4,13 +4,24 @@
 
 \subsubsection{Definition 1 (Norm)}
 
-Let $\mathcal{F}$  be a vector space over $\mathcal{R}$. A function $\left\| \cdot \right\|_{\mathcal{F}}:\mathcal{F} \rightarrow [0, +\infty ]$  is said to be a \texttt{norm} on $\mathcal{F}$ if
+Let $\mathcal{F}$  be a vector space over $\mathbb{R}$. A function $\left\| \cdot \right\|_{\mathcal{F}}:\mathcal{F} \rightarrow [0, +\infty ]$  is said to be a \texttt{norm} on $\mathcal{F}$ if
 
 \begin{enumerate}
     \item $\left\| f \right\|_{\mathcal{F}} = 0$ iff f = \textbf{0} (\textit{norm separate points})
-    \item $\left\| \lambda f \right\|_{\mathcal{F}} = | \lambda | \left\| f \right\|_{\mathcal{F}}, \forall \lambda \in \mathcal{R}, \forall f \in \mathcal{F} $ (\textit{positive homogeneity})
+    \item $\left\| \lambda f \right\|_{\mathcal{F}} = | \lambda | \left\| f \right\|_{\mathcal{F}}, \forall \lambda \in \mathbb{R}, \forall f \in \mathcal{F} $ (\textit{positive homogeneity})
+    \item $\left\| f + g \right\|_{\mathcal{F}} \leq \left\| f \right\|_{\mathcal{F}} + \left\| g \right\|_{\mathcal{F}}, \forall f, g \in \mathcal{F}$ (\textit{triangle inequality})
 \end{enumerate}
 \textbf{Distance:} a notation of distance on $\mathcal{F}: d(f,g) =  \left\|f-g\right\|_\mathcal{F}$ 
 
 \subsubsection{Definition 2 (Convergent Sequence)}
-A sequence $\{f_n\}_{n=1}^{\infty}$ of elements of a normed vector space ($\mathcal{F}, \cdot$)
+A sequence $\{f_n\}_{n=1}^{\infty}$ of elements of a normed vector space ($\mathcal{F}, \cdot$) is said to \textit{converge} to $f \in \mathcal{F}$ if for every $\epsilon>0$, there exists $N = N(\epsilon) \in \mathbb{N}$
+
+\subsubsection{Definition 3 (Cauchy Sequence)}
+A sequence $\{f_n\}_{n=1}^\infty$ of elements of a normed vector space($\mathcal{F}, \left\| \cdot \right\|_\mathcal{F}$) is said to be a \textit{Cauchy(fundamental) Sequence} if for every $\epsilon > 0$, there exists $N = N(\epsilon) \in \mathbb{N}$, such that for all $n \geq N, \left\| f_n - f \right\| < \epsilon$
+
+\subsubsection{Definition 4 (Complete Space)}
+A space $\mathcal{X}$ is complete if every Cauchy sequence in $\mathcal{X}$ converges: it has a limit, and this limit is in $\mathcal{X}$.
+
+\subsubsection{Definition 5 (Banach Space)}
+Banach space is a complete normed space, i.e, it contains the limits of all its Cauchy sequences. 
+
